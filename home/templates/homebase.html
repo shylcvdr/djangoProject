@@ -35,6 +35,7 @@
     <link href="{% static 'css/style.css'%}" rel="stylesheet">
     {% block head %}  {% endblock %}
 </head>
+<body>
     {% include 'header.html' %}
     {% block sidebar %}  {% endblock %}
     {% block slider %}  {% endblock %}
@@ -42,7 +43,7 @@
     {% block body %}  {% endblock %}
     {% include 'footer.html' %}
     {% block footer %}  {% endblock %}
-<body>
+
 
 </body>
 
