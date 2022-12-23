@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from home.models import Setting
+
+
 # Create your views here.
 def index(request):
-    text = " Django kurulumu: python -m pip install Django<br> Proje oluşturma: django-admin startproject djangoproje<br> app ekleme: python manage.py startapp home"
-    context = {'text': text}
+    setting = Setting.objects.get()
+    context = {'setting':setting}
     return render(request, 'index.html', context)
